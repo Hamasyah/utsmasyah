@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>culturescape.com</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+	<link rel="stylesheet" href="styleuts.css">
+    <script src="uts.js"></script>
+	<link rel="icon" href="/latihan/images/logouts1.webp" type="webp"> 
+
+</head>
+<body style="background-color:ghostwhite;">
+
+<!-- Homapage Paling Atas -->
+<section id="home">
+    <h2 style="text-align: center;">C<font style="italic">ULTURESCAPE</font></h2><br>
+    <p style="text-align:justify; text-align:center;"><img src="/Latihan/images/logouts1.webp" style="float: left; margin-right: 10px;" width="150px" height="100px"><blockquote>Mari kita menjelajahi warna-warni budaya, keunikan tradisi, dan keindahan perayaan yang membentang dari ujung timur hingga barat dunia. Temukan kisah-kisah yang menginspirasi, ritual yang memikat, dan warisan yang menghubungkan kita sebagai manusia. Di sini, Anda tidak hanya membaca, tetapi juga merasakan keajaiban tradisi yang hidup di setiap sudut bumi. Bersama, kita menghormati perbedaan, memahami keberagaman, dan menemukan kesatuan dalam kebudayaan global.</blockquote></p>
+</section>
+<br>
+<br>
+<br>
+
+ <!-- Tulisan Berjalan-->
+    <marquee>
+        <h1 style="font font-style: italic ;">Selamat datang di Culturescape!! Jejak Tradisi dan Budaya Dunia! Mari temukan keajaiban perayaan yang penuh warna dari seluruh penjuru bumi</h1>
+    <marquee>
+    </marquee>
+</marquee>
+
+<!-- Navbar -->
+<header> 
+    <nav class="navbar">
+        <div class="logo">
+            <a href="#">CultureScape</a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#aboutus">About Us</a></li>
+            <li><a href="#content">Content</li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- Membuat Slide Gambar -->
+<section id="gallery">
+<div class="slider-container">
+    <div class="slides">
+        <img src="/latihan/images/latomatina.jpg" alt="Gambar 1">
+        <img src="/latihan/images/ngaben.jpg" alt="Gambar 2">
+        <img src="/latihan/images/hanami.jpg" alt="Gambar 3">
+        <img src="/latihan/images/sukukaren.jpg" alt="Gambar 4">
+        <img src="/latihan/images/yordania.jpg" alt="Gambar 5">
+        <img src="/latihan/images/peru.jpg" alt="Gambar 6">
+        
+    </div>
+
+    <!-- Tanda Panah Untuk Ganti Slide Gambar -->
+    <a class="prev" onclick="moveSlide(-1)">&#10094;</a>
+    <a class="next" onclick="moveSlide(1)">&#10095;</a>
+</div>
+
+<!-- gariss di bawah foto-foto dan Bulet-buletnya -->
+<div class="dots-container">
+    <span class="dot" onclick="currentSlide(1)"></span> 
+    <span class="dot" onclick="currentSlide(2)"></span> 
+    <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+
+<script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    // Function to change slide with arrows
+    function moveSlide(n) {
+        showSlides(slideIndex += n);
+    }
+
+    // Function to set current slide with dots
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    // Main function to display slides
+    function showSlides(n) {
+        let i;
+        const slides = document.querySelectorAll('.slides img');
+        const dots = document.querySelectorAll('.dot');
+        
+        if (n > slides.length) {slideIndex = 1}    
+        if (n < 1) {slideIndex = slides.length}
+        
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+        }
+        
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        
+        slides[slideIndex - 1].style.display = "block";  
+        dots[slideIndex - 1].className += " active";
+    }
+</script>
+<br>
+<!-- Content Dan Aside -->
+<section id="content">
+<section id="aboutus">
+<div class="container">
+       
+        <aside>
+            <main>
+            <h2>Dapatkan informasi yang lain, segera daftar!</h2></main>
+            <br>
+            <form action="/action_page.php" target="_blank">
+            <label for="nama">Nama Lengkap</label><br>
+              <input type="text" id="nama"name="nama"><br>
+               <label for="nama">Email</label><br>
+               <input type="text" id="nama"name="nama"><br>
+                <input type="submit" value="submit">
+            </form>
+
+            <br><br><br>
+            <main><h3>Social Media</h3></main>
+            <ul>
+                <li><a href="https://www.instagram.com/railhs_/profilecard/?igsh=MWd1ZGNxdWR0MDE4bw==">Instagram</a></li>
+                <li><a href="UCS4J4_d8dm1AkOfLxQBa-uw">Youtube</a></li>
+                <li><a href="https://x.com/railhs151927?t=g5LzAYMqNoMMHx47KADmOw&s=09">X</a></li>
+                <li><a href="https://www.tiktok.com/@osfoola_?_t=8rfsXAsbiTa&_r=1">TikTok</a></li>
+            </ul>
+        <br><br>
+        <form action="/action_page.php">
+
+        <main>
+        <p>Kesan & Pesan</p></main><br>
+        <textarea name="kesan" rows="10"></textarea>
+        <input type="submit" value="submit">
+        </form><br>
+
+        <!-- Javascript waktu -->
+        <h2>Waktu</h2>
+        <button type="button" onclick="document.getElementById('demo').innerHTML = Date()">
+        <main>Istirahat Sejenak</button></main>
+        <p id="demo"></p>
+
+        </aside>
+
+         <main>
+           <h2><mark>Perayaan Yang Ada di Dunia</mark></h2>
+            <h5>Hamasyah Nuur Laila | November 23, 2024 | Budaya dunia</h5>
+        <img src="/latihan/images/tihar.jpg" style="height: 100px">
+            <p style="text-align: justify;">Selamat datang di platform yang merayakan keberagaman tradisi dunia, tempat kami mengeksplorasi dan memperkenalkan berbagai perayaan unik dari berbagai budaya. Melalui situs ini, kami berharap dapat menghubungkan Anda dengan cerita, warna, dan semangat yang menghidupkan festival-festival dari setiap sudut bumi. Mari bersama-sama menjelajahi keajaiban budaya global yang mempererat hubungan antar bangsa."</p>  
+        <!-- Baca Selengkapnya -->
+        <div class="content-section">
+        <h2 style="text-align: right;"><font size="4"><a href="uts1.html" class="btn-see-more">Lihat Selengkapnya &raquo;</font></a></h2>
+
+    
+        <h2><mark>Tradisi Dunia</mark></h2>
+        <h5>Hamasyah Nuur Laila | November 19, 2024 | Budaya dunia</h5>
+        <img src="/latihan/images/sukumiao.jpg" style="height: 100px">
+            <p style="text-align: justify;">Website ini hadir untuk merayakan keindahan tradisi dunia yang diwariskan dari generasi ke generasi. Dari ritual kuno hingga kebiasaan modern, kami mengajak Anda menyelami kearifan lokal yang membentuk identitas budaya berbagai masyarakat di dunia. Bergabunglah dalam perjalanan ini untuk memahami, menghormati, dan melestarikan keberagaman tradisi yang memperkaya kehidupan kita</p>  
+        <div class="content-section">
+        <h2 style="text-align: right;"><font size="4"><a href="uts2.html" class="btn-see-more">Lihat Selengkapnya &raquo;</font></a></h2>
+    </div>
+ </div>
+        
+
+           <h2><mark>Warisan Budaya Menurut UNESCO</mark></h2>
+            <h5>Hamasyah Nuur Laila | November 17, 2024 | Budaya dunia</h5>
+        <img src="/latihan/images/yunani.jpg" style="height: 100px">
+            <p style="text-align: justify;">Melalui situs ini, kami mengundang Anda mengenal warisan budaya yang diakui oleh UNESCO sebagai harta dunia. Setiap situs, tarian, lagu, dan tradisi yang diangkat di sini mencerminkan keindahan yang tak ternilai dari keberagaman umat manusia. Bersama, mari kita menjaga dan merayakan warisan ini sebagai bagian penting dari identitas global kita</p>  
+        <div class="content-section">
+        <h2 style="text-align: right;"><font size="4"><a href="uts3.html" class="btn-see-more">Lihat Selengkapnya &raquo;</font></a></h2>
+    </div>
+ </div>
+        </main>
+
+    <hr>
+    <p style="text-align: center;">Copyright@2024 Hamasyah Nuur Laila</p>
+    <hr>
+    <br><br>
+
+<!-- Cara Membuat Footer -->
+<section id="contact">
+<div style="background-color: black; color: white; padding: 5px;">
+    <h2><center><font size="8">CULTURESCAPE</font></center></h2>
+    <p><font size="6"><center></font></center></p>
+
+        <footer class="footer">
+        <div class="footer-container">
+                <div class="footer-column">
+
+<p><b>Desain Web Oleh:</b></p>
+<table><center>
+    <tr>
+        <td>Nama</td>
+        <td>:</td>
+        <td>Hamasyah Nuur Laila</td>
+    </tr>
+    <tr>
+        <td>NIM</td>
+        <td>:</td>
+        <td>11220251000019</td>
+    </tr>
+     <tr>
+        <td>KELAS</td>
+        <td>:</td>
+        <td>5-C</td>
+    </tr>
+    <tr>
+        <td>Email</td>
+        <td>:</td>
+        <td><a href="mailto:hams39686@gmail.com">hams39686@gmail.com</a></td>
+    </tr></center>
+</table>
+
+</div>
+</body>
+</html>
